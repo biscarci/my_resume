@@ -1,0 +1,326 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{dirtytalk}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1in}
+\setlength{\TPVertModule}{1in}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\titleformat{\littlesection}{
+  \vspace{-4pt}\scshape\raggedright
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\def\code#1{\texttt{#1}}
+
+\newcommand{\fancyurl}[2]{\textcolor{BlueViolet}{\href{#1}{\underline{#2}}}}
+\newcommand{\fancyref}[1]{\textcolor{BlueViolet}{\nameref{#1}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeLittleSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \footnotesize{\textbf{#1}} & \footnotesize{{#2}} \\
+      \textit{\footnotesize #3} & \textit{\footnotesize #4} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeBody}[1]{
+  \vspace{2pt} \\ \small{#1}
+}
+
+\newcommand{\resumeTitleSubheading}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}
+    \vspace{2pt} \\
+    \small{\textbf{Title}: \textit{#3}}
+    \vspace{-7pt}
+}
+
+\newcommand{\resumePaperTitle}[5]{
+    \vspace{2pt}
+    \item
+    \small{\textbf{#1}, \textit{#2}, #3, (#4) - #5} \\
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]\vspace{2pt}}
+\newcommand{\resumeSubHeadingPublicationsListStart}{\begin{itemize}[leftmargin=0.15in, rightmargin=0.05in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.1in]\vspace{-3pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\newcommand{\programmingSkills}[4]{
+    \textbf{#1}
+    \begin{itemize}[leftmargin=0.15in, topsep=0pt, label={}]
+    \small{\item
+    \textit{Proficiency}: {#2} \\
+    \textit{Intermediate}: {#3} \\
+    \textit{Basics}: {#4}}
+    \end{itemize}
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+        \textbf{\huge \scshape Biagio Scarciello} \\ \vspace{4pt} \large{Embedded Software \& Systems Engineer} \\ \vspace{2pt}
+        \small{C/C++ $|$ Real-Time Systems $|$ Embedded Linux $|$ Railway Safety-Critical Systems} \\ \vspace{4pt}
+        \small \fancyurl{mailto:biscarci@gmail.com}{biscarci@gmail.com} $|$
+        +39 393 23 07 691 $|$
+        \fancyurl{https://www.linkedin.com/in/biscarci90}{LinkedIn} $|$
+        \fancyurl{https://github.com/biscarci}{GitHub} \\ \vspace{2pt}
+        \small{Via Sant'Antonio a Capodimonte 46, 80131 Naples, Italy}
+    \end{center}
+
+
+\section{Profile}
+
+\justifying
+\small{Senior Embedded Software \& Systems Engineer with 8+ years of experience delivering
+safety-critical railway systems across high-speed, metro, and regional platforms. Expert in
+Embedded C/C++, real-time system design, and onboard communication protocols (TRDP, IPTCom,
+Ethernet). Proven technical referent over the full engineering lifecycle: system architecture
+definition, integration, verification \& validation, and on-site commissioning. Experienced in
+embedded Linux environments and in cross-functional, international engineering teams.
+Open to relocation and international assignments.}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Software Lead --- Diagnostic Systems}{2024 -- Present}
+        {Hitachi Rail STS S.p.A.}{Naples, Italy}
+        \resumeItemListStart
+          \resumeItem{
+            \textbf{Software lead} for the diagnostic systems of the \textbf{Rome Metro (lines A/B)}
+            and \textbf{Florence Tram} projects, owning the software from development through
+            integration and on-site commissioning.
+          }
+          \resumeItem{
+            \textbf{Software development support} on the \textbf{Milan Metro (lines 1, 2, 3)}
+            diagnostic system, contributing to development, integration, and issue resolution.
+          }
+          \resumeItem{
+            Led a focused stabilization phase on the Rome Metro project ahead of official customer
+            testing, \textbf{resolving 230 open issues within one month} and securing the validation
+            milestones on schedule.
+          }
+          \resumeItem{
+            Led the full software lifecycle of onboard diagnostic systems, developing the HMI and
+            optimizing the embedded backend framework in Embedded C.
+          }
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {System Engineer --- Event Recorder \& Safety-Critical Subsystems}{2022 -- 2024}
+        {Hitachi Rail STS S.p.A.}{Naples, Italy}
+        \resumeItemListStart
+          \resumeItem{
+            System owner of the \textbf{Event Recorder} product line: defined the complete system
+            architecture and requirements, and drove the solution from specification through
+            integration, validation, and customer acceptance for the metro networks of
+            \textbf{Milan, Rome, and Washington (WMATA)}.
+          }
+          \resumeItem{
+            System Engineer referent for Bogie Control System communication (TCMS integration) using
+            message data protocol, defining the communication architecture and coordinating
+            cross-functional validation activities across software, hardware, and RAMS teams.
+          }
+          \resumeItem{
+            Technical referent for onboard safety-critical subsystems --- Event Recorder, Dead Man,
+            and Zero Speed detection --- covering requirements analysis, traceability (DOORS),
+            interface definition, and verification strategy.
+          }
+          \resumeItem{
+            Coordinated integration, troubleshooting, and commissioning of diagnostic subsystems in
+            operational environments, improving the reliability of diagnostic data communication
+            between subsystems and TCMS.
+          }
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Embedded Software Developer --- Regional \& High-Speed Platforms}{Apr. 2018 -- 2022}
+        {Hitachi Rail STS S.p.A.}{Naples, Italy}
+        \resumeItemListStart
+          \resumeItem{
+            Developed and commissioned the diagnostic systems for the regional fleets
+            \textbf{Trenitalia Rock}, \textbf{Trenitalia Blues}, and \textbf{Ferrovie Nord Milano},
+            and contributed to the high-speed platforms (\textit{ETR1000 Frecciarossa, ETR700}).
+          }
+          \resumeItem{
+            Developed and extended Condition-Based Maintenance (CBM) software in Embedded C, and
+            designed diagnostic algorithms in C and MATLAB/Simulink for onboard systems.
+          }
+          \resumeItem{
+            Enhanced and refactored the embedded diagnostic software framework, improving
+            maintainability and reuse across train platforms.
+          }
+          \resumeItem{
+            Implemented multi-vehicle composition management logic (backend and frontend) and
+            designed diagnostic HMI components in HTML/JavaScript.
+          }
+          \resumeItem{
+            Improved the reliability and stability of distributed onboard communication networks,
+            managing issue tracking and defect resolution through Jira during deployment phases.
+          }
+          \resumeItem{
+            Supported integration, validation, and troubleshooting activities during commissioning
+            phases in operational environments.
+          }
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {M.Sc. in Automation Engineering}{}
+      {University of Naples Federico II $|$ 110/110 cum laude}{Naples, IT}
+    \resumeSubheading
+      {B.Sc. in Automation Engineering}{}
+      {University of Naples Federico II $|$ 107/110}{Naples, IT}
+    \resumeSubheading
+      {Full Stack Development \& AI Agents Specialization}{In Progress}
+      {Start2Impact University (Online)}{}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Embedded \& Real-Time Systems}{: Embedded C/C++, real-time systems design, memory management \& performance optimization, embedded Linux environment, debugging \& troubleshooting in field environments} \\
+     \textbf{Communication \& Distributed Systems}{: Ethernet-based onboard networks, TRDP (Train Real-time Data Protocol), IPTCom, MQTT, TCP/IP networking, multi-vehicle communication logic, communication gateway design} \\
+     \textbf{System Engineering \& Validation}{: System architecture definition, Integration/Verification \& Validation (IV\&V), commissioning support, requirements analysis \& traceability (DOORS), issue tracking (Jira), safety-critical environment exposure (railway domain)} \\
+     \textbf{Programming Languages}{: C (Embedded), C++, Python, JavaScript, MATLAB/Simulink} \\
+     \textbf{Software Development}{: Python, REST API design, PostgreSQL, Docker \& Docker Compose, Linux scripting} \\
+     \textbf{Development Tools}{: CMake, Git, SVN, GitHub, Wireshark, CI/CD fundamentals, MATLAB/Simulink}
+    }}
+ \end{itemize}
+ \textbf{Languages}: \textit{Italian} (native), \textit{English} (professional working proficiency, B2) \\
+ \textbf{Availability}: Open to relocation and international assignments \\
+ \textbf{Interests}: CrossFit, swing dancing, technology, graphic design, travel
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingPublicationsListStart
+    \resumePaperTitle
+      {Model-based vehicular prognostics framework using Big Data architecture}
+      {Computers in Industry, Elsevier}
+      {A. Petrillo, A. Picariello, S. Santini, \textbf{B. Scarciello}, G. Sperl\`i}
+      {2019}
+      {\fancyurl{https://doi.org/10.1016/j.compind.2019.103177}{doi.org/10.1016/j.compind.2019.103177}}
+    \resumeItemListStart
+      \resumeItem{
+        Proposed \textbf{ATOMIC} (Automotive predicTOr Maintenance In Cloud), a cloud-based Big Data
+        infrastructure for Integrated Vehicle Health Management (IVHM) that combines nonlinear
+        discrete-time models of nominal and faulty component behaviour to estimate End-Of-Life (EOL)
+        and Remaining Useful Life (RUL) indicators on-line.
+      }
+      \resumeItem{
+        Validated the prognostic method on the Delphi DFG1596 fuel pump and benchmarked the
+        architecture's deployment configurations in terms of scalability and cost.
+      }
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,54 @@
+% !TEX TS-program = lualatex
+% CV — Biagio Scarciello (versione con foto)
+% Template: YAAC — Another Awesome CV (Christophe Roger / Darwiin)
+% Template license: CC BY-SA 4.0
+
+\documentclass[localFont,alternative,10pt,compact]{yaac-another-awesome-cv}
+
+% Accent color: deep navy, echoing the jacket in the header photo
+\definecolor{basecolor}{HTML}{1B3A5C}
+\colorlet{linkcolor}{basecolor}
+\colorlet{accentcolor}{linkcolor!90}
+\colorlet{symbolcolor}{linkcolor!85}
+
+% More breathing room between sections than the template default (2pt/2pt)
+\titlespacing{\section}{0pt}{14pt}{6pt}
+
+% Bullet points instead of the template's angle-right arrows
+\setlist[itemize,1]{label=\textbullet, nosep, leftmargin=2em}
+\setlist[itemize,2]{label=\textbullet, nosep, leftmargin=1.5em}
+
+% Centered fixed-width column, for the project-name column in Freelance Projects
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\name{Biagio}{Scarciello}
+\tagline{Embedded Software \& Systems Engineer | Railway Safety-Critical Systems}
+\photo{2.5cm}{photo}
+\socialinfo{
+	\linkedin{biscarci90}
+	\github{biscarci}\\
+	\smartphone{+39 393 23 07 691}
+	\email{biscarci@gmail.com}\\
+	\address{Via Sant'Antonio a Capodimonte 46, 80131 Naples, Italy}
+}
+
+\begin{document}
+
+	\selectlanguage{english}
+
+	\makecvheader
+
+	\makecvfooter
+		{\textsc{\today}}
+		{\textsc{Biagio Scarciello — CV}}
+		{\thepage}
+
+	\input{section_profile}
+	\input{section_skills}
+	\input{section_experience}
+	\input{section_freelance}
+	\input{section_education}
+	\input{section_languages}
+	\input{section_publications}
+
+\end{document}

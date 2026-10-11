@@ -1,0 +1,77 @@
+\sectionTitle{Freelance Projects}{\faCode}
+
+\begin{longtable}{C{2.5cm}|p{14.8cm}}
+
+	\textbf{NAPP} & \textbf{Multi-tenant HACCP compliance platform} --- food safety management \hfill \footnotesize{\link{https://napphaccp.com}{napphaccp.com}}\\&
+	\footnotesize{
+		Monorepo serving three actors: business owners, on-site operators, and preconfigured
+		Android devices. Operators log temperatures, production, sanitation, and
+		non-conformities from tablets; owners configure clients, equipment, and documents from
+		a web panel.
+		\begin{itemize}
+			\item Designed the multi-tenant data model with per-client module enablement and device-level authentication (\texttt{device\_id} + secret)
+			\item Built the FastAPI backend as single source of truth, the React owner panel, the Flutter operator app, and the Next.js public landing
+			\item Integrated \textbf{Stripe} for subscription billing and prepaid plans, handling checkout sessions and webhook-driven payment reconciliation
+		\end{itemize}
+		\vspace{-1em}
+	}\\&
+	\footnotesize{\emph{Technologies:} FastAPI, Python 3.12, PostgreSQL, Alembic, MinIO, Stripe, React 19, TypeScript, Vite, Flutter, Next.js, Docker}\\
+\multicolumn{2}{c}{}\\
+
+	\textbf{CRM Evolution Time} & \textbf{Multi-workspace inventory platform} --- luxury watch trading\\&
+	\footnotesize{
+		Inventory and sales platform for a team with distinct specializations, integrated with
+		an external marketplace.
+		\begin{itemize}
+			\item Implemented role-based access control across four roles (Owner, Admin, Warehouse, Accountant) with JWT refresh-token rotation
+			\item Built the OKTOPIA marketplace integration, Excel bulk import, and legacy data migration
+		\end{itemize}
+		\vspace{-1em}
+	}\\&
+	\footnotesize{\emph{Technologies:} FastAPI, SQLAlchemy 2 (async), PostgreSQL, Next.js 15, TypeScript, React Query, Resend, Docker}\\
+\multicolumn{2}{c}{}\\
+
+
+	\textbf{Program Elite} & \textbf{Booking website \& billing CRM} --- fitness coaching business\\&
+	\footnotesize{
+		Two connected systems: a public Wix site handling bookings and user registrations, and a
+		dedicated CRM that consolidates the resulting revenue into financial reporting.
+		\begin{itemize}
+			\item Built and maintained the \textbf{Wix} site managing bookings and user sign-ups
+			\item Developed a dedicated CRM integrating the \textbf{Stripe} API to reconcile payments and produce consolidated financial reporting
+			\item Automated invoice generation through \textbf{Billin}, with PDF rendering, country-specific tax handling, and delivery to clients by email via \textbf{Resend}
+		\end{itemize}
+		\vspace{-1em}
+	}\\&
+	\footnotesize{\emph{Technologies:} Wix, FastAPI, Stripe API, Billin API, Resend, Jinja2, Tailwind CSS, PostgreSQL}\\
+\multicolumn{2}{c}{}\\
+
+	\textbf{Dolphin House} & \textbf{Booking and content website} --- hospitality \hfill \footnotesize{\link{https://web-production-5d607.up.railway.app/}{live demo}}\\&
+	\footnotesize{
+		Full-stack website with content management, media handling, and transactional email.
+		\begin{itemize}
+			\item Built on Next.js with server-side rendering, Drizzle ORM over PostgreSQL, and JWT sessions
+			\item S3-backed media pipeline with presigned uploads, and animated front-end (GSAP, Lenis)
+		\end{itemize}
+		\vspace{-1em}
+	}\\&
+	\footnotesize{\emph{Technologies:} Next.js, React, TypeScript, Drizzle ORM, PostgreSQL, AWS S3, Resend, Tailwind CSS, Docker}\\
+
+\multicolumn{2}{c}{}\\
+
+	\textbf{Websites} & \textbf{Websites, e-commerce \& brand design} --- selected client work\\&
+	\footnotesize{
+		Design and development of responsive sites, online stores, and brand assets for local
+		businesses and professionals, from concept to deployment.
+		\begin{itemize}
+			\item \textbf{The Chik} --- \textbf{Shopify} e-commerce store: theme customization, product catalogue setup, and checkout configuration \footnotesize{\emph{(in progress)}}
+			\item \textbf{JTF Gaskets} --- brand identity and product catalogue designed in \textbf{Adobe InDesign}, alongside the corporate site \footnotesize{(\link{https://jtf-gaskets.com/}{jtf-gaskets.com})}
+			\item \textbf{BP Nutrition} --- nutritionist practice site with service pages and contact funnel \footnotesize{(\link{https://bpnutrition.it}{bpnutrition.it})}
+			\item \textbf{Clinica Sabe} --- clinic site with service pages and patient contact flow \footnotesize{(\link{https://www.sabesnc.com/}{sabesnc.com})}
+			\item \textbf{DV Barberia} --- single-page barbershop landing site
+		\end{itemize}
+		\vspace{-1em}
+	}\\&
+	\footnotesize{\emph{Technologies:} HTML5, CSS3, JavaScript, PHP, Shopify, Adobe InDesign, responsive design, SEO fundamentals}\\
+
+\end{longtable}
